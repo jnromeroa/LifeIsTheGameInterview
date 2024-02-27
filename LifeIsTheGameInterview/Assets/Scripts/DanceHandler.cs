@@ -5,16 +5,23 @@ using UnityEngine;
 public class DanceHandler : MonoBehaviour
 {
     [SerializeField] Animator _characterAnimator;
+    private int _animationHash;
     private void Start()
     {
-        int hash = PlayerPrefs.GetInt("Hash", -1);
-        hash = hash == -1 ? Animator.StringToHash("House") : hash;
-        PlayAnimation(hash);
+        LoadAnimationHash();
+        PlayAnimation(_animationHash);
 
     }
 
     public void PlayAnimation(int hash)
     {
         _characterAnimator.SetTrigger(hash);
+    }
+
+    private void LoadAnimationHash()
+    {
+        int hash = PlayerPrefs.GetInt("HASH", -1);
+        Debug.Log($"Hash {hash} loaded.");
+        _animationHash = hash == -1 ? Animator.StringToHash("House") : hash;
     }
 }

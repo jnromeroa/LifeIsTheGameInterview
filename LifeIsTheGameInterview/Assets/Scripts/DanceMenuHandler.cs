@@ -30,7 +30,8 @@ public class DanceMenuHandler : MonoBehaviour
 
     public void SaveSelection()
     {
-        PlayerPrefs.SetInt("hash", selectedAnimationHash);
+        PlayerPrefs.SetInt("HASH", selectedAnimationHash);
+        Debug.Log($"Hash {selectedAnimationHash} has been saved.");
     }
 
     public void LoadNextScene()
