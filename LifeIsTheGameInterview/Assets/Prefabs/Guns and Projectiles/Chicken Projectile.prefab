@@ -719,7 +719,7 @@ Transform:
   m_GameObject: {fileID: 8558291147017092651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2808942640020398884}
   - {fileID: 7504152892965631222}
@@ -752,10 +752,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8558291147017092651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b501cabb9d1b3418fcbe13753759e7, type: 3}
+  m_Script: {fileID: 11500000, guid: d0aefa718d9953e4fad5c153b08bbfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _projectileData: {fileID: 11400000, guid: 960804c373b4a9346be4e3a3f623bcf8, type: 2}
 --- !u!114 &5490236240598779168
 MonoBehaviour:
   m_ObjectHideFlags: 0

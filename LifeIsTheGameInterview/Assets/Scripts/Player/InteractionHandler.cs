@@ -27,7 +27,7 @@ public class InteractionHandler : MonoBehaviour
             Grab(collidedWithRay);
         }
 
-        if(Input.GetMouseButtonDown(0) && _currentlyHoldingShootable != null)
+        if(Input.GetMouseButton(0) && _currentlyHoldingShootable != null)
         {
             _currentlyHoldingShootable.Shoot();
         }
@@ -64,7 +64,7 @@ public class InteractionHandler : MonoBehaviour
         if (_lastInteracted != null) Drop();
         interactedGO.transform.parent = _holdTransform;
         interactedGO.transform.localPosition = Vector3.zero;
-        interactedGO.transform.localRotation = Quaternion.Euler(interactedGO.GetComponent<Gun>().OffsetRotation);
+        interactedGO.transform.localRotation = Quaternion.Euler(interactedGO.GetComponent<Gun>().GunData.OffsetRotation);
         _lastInteracted = interactedGO.GetComponent<IDropable>();
         _currentlyHoldingShootable = interactedGO.GetComponent<IShootable>();
     }

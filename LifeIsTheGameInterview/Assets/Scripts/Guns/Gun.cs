@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour, IShootable, IDropable, IHiglightable, IGrabable
 {
+    public GunSO GunData;
+
     [SerializeField] 
     GameObject _highlightGameObject;
     [SerializeField]
-    GameObject _projectilePrefab;
-    [SerializeField]
     Transform _projectileSpawner;
-    public Vector3 OffsetRotation;
 
     Vector3 _originalPosition;
     Quaternion _originalRotation;
-    
+
+    private float _shootCooldownTime = 0;
+
     public bool IsHighlighted { get; protected set; }
 
     private void Start()
     {
+        _highlightGameObject.SetActive(false);
         _originalPosition = transform.position;
         _originalRotation = transform.rotation;
+    }
+    private void Update()
+    {
+        _shootCooldownTime += Time.deltaTime;
     }
 
     public void Highlight()
@@ -40,12 +46,13 @@ public class Gun : MonoBehaviour, IShootable, IDropable, IHiglightable, IGrababl
 
     public virtual void Shoot()
     {
-        Instantiate(_projectilePrefab, _projectileSpawner.position, transform.parent.rotation);
+        if (_shootCooldownTime < 1 / GunData.fireCadence) return;
+         Instantiate(GunData.ProjectilePrefab, _projectileSpawner.position, transform.parent.rotation);
+        _shootCooldownTime = 0;
     }
 
     public void Drop()
     {
-        Debug.Log($"succesfully dropped, {gameObject.name}");
         transform.parent = null;
         transform.position = _originalPosition;
         transform.rotation = _originalRotation;
@@ -53,6 +60,6 @@ public class Gun : MonoBehaviour, IShootable, IDropable, IHiglightable, IGrababl
 
     public void Grab()
     {
-        throw new System.NotImplementedException();
+        
     }
 }

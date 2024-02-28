@@ -1340,7 +1340,7 @@ Transform:
   m_GameObject: {fileID: 6011501425361611020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1474549349153297186}
   - {fileID: 8689929249023147310}
@@ -1407,12 +1407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3be5fe7e8f840e498ec4ba1af8dc82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  _targetCheckRadius: 5
-  _targetLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  _rotationSpeed: 10
+  _projectileData: {fileID: 11400000, guid: 250fa9f0050cc6e45adb513d31a55f64, type: 2}
 --- !u!114 &6499615124597290012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,10 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f5a7a280aa72c4ab3d34f0f7d0e938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particlesPrefab: {fileID: 2835015170324023039, guid: 5bd629072ccbb444496110052d70f7ce, type: 3}
-  _targetLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  _projectileData: {fileID: 11400000, guid: 250fa9f0050cc6e45adb513d31a55f64, type: 2}
 --- !u!1 &6490655458056502397
 GameObject:
   m_ObjectHideFlags: 0
