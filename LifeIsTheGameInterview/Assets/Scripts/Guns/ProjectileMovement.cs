@@ -15,6 +15,7 @@ public class ProjectileMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _t = transform;
         _rb.velocity = _t.forward * _projectileData.Speed;
+        Destroy(this.gameObject, _projectileData.LifeTimeSeconds);
     }
 
 
@@ -22,7 +23,6 @@ public class ProjectileMovement : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
-        HandleLifeTime();
 
     }
 
@@ -37,13 +37,5 @@ public class ProjectileMovement : MonoBehaviour
         _rb.velocity = _t.forward * _projectileData.Speed;
     }
 
-    private void HandleLifeTime()
-    {
-        _time += Time.deltaTime;
-        if (_time >= _projectileData.LifeTimeSeconds)
-        {
-            Destroy(this.gameObject);
-        }
-        
-    }
+
 }
