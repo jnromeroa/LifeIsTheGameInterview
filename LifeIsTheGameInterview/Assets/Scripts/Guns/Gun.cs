@@ -47,7 +47,7 @@ public class Gun : MonoBehaviour, IShootable, IDropable, IHiglightable, IGrababl
     public virtual void Shoot()
     {
         if (_shootCooldownTime < 1 / GunData.fireCadence) return;
-         Instantiate(GunData.ProjectilePrefab, _projectileSpawner.position, transform.parent.rotation);
+         Instantiate(GunData.ProjectilePrefab, _projectileSpawner.position, transform.parent.rotation); // I would normally implement a Pool for this but due to simplicity of the test, I just instantiated objects
         _shootCooldownTime = 0;
     }
 
