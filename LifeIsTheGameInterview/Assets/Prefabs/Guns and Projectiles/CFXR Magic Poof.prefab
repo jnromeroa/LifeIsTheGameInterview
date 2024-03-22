@@ -150,7 +150,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 22.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4921,7 +4921,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 22.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9538,8 +9538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c43cf7b8e6c4b43abe229932ecebb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 750
-  radius: 5
+  Intensity: 0
+  Radius: 0
 --- !u!1 &3325809662294956182
 GameObject:
   m_ObjectHideFlags: 0
@@ -9690,8 +9690,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 20
-      minScalar: 5
+      scalar: 30
+      minScalar: 7.5
       maxCurve:
         serializedVersion: 2
         m_Curve:

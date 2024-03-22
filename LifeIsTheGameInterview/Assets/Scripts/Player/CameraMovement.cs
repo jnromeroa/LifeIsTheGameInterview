@@ -12,7 +12,6 @@ public class CameraMovement : MonoBehaviour
 
 
 
-
     float rotacionX = 0f;
 
     void Start()
