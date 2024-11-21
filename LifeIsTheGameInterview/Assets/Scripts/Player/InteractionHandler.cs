@@ -38,7 +38,7 @@ public class InteractionHandler : MonoBehaviour
     {
         GameObject collidedWithRay = null;
         Ray ray = _mainCamera.ScreenPointToRay(new Vector3(_mainCamera.pixelWidth / 2, _mainCamera.pixelHeight / 2, 0));
-        Debug.DrawRay(ray.origin, ray.direction * 50, Color.red);
+        //Debug.DrawRay(ray.origin, ray.direction * 50, Color.red);
         RaycastHit hit;
         if (!Physics.Raycast(ray, out hit, Mathf.Infinity, _interactableLayer))
         {
