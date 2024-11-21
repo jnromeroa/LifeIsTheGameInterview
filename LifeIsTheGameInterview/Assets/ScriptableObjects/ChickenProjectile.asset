@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0f7dc99709802439663eb167e7c414, type: 3}
   m_Name: ChickenProjectile
   m_EditorClassIdentifier: 
-  Speed: 15
+  Speed: 20
   LifeTimeSeconds: 10
   ApplyGravity: 1
