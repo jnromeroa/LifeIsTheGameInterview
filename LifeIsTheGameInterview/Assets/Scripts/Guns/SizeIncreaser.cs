@@ -16,6 +16,6 @@ public class SizeIncreaser : MonoBehaviour
     {
         _elapsedTime += Time.deltaTime;
         if (_elapsedTime >= _lerpTime) return;
-        _t.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, _elapsedTime/ _lerpTime);
+        _t.localScale = Vector3.Lerp(Vector3.zero, Vector3.one*1.5f, _elapsedTime/ _lerpTime);
     }
 }

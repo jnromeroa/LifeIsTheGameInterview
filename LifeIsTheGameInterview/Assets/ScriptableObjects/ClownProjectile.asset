@@ -16,7 +16,7 @@ MonoBehaviour:
   LifeTimeSeconds: 5
   ApplyGravity: 1
   TargetFollowRadius: 5
-  TargetFollowRotationSpeed: 10
+  TargetFollowRotationSpeed: 40
   ExplosionForce: 750
   ExplosionRadius: 5
   TargetLayer:
